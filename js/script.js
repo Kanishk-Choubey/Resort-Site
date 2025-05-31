@@ -8,8 +8,22 @@ console.log("Resort website loaded");
     duration: 1200,
     easing: 'easeOutExpo'
   });
-
-  // Remove preloader after page loads
+  anime({
+      targets: '#hero h1, #hero p, #hero .btn',
+      opacity: [0, 1],
+      translateY: [40, 0],
+      delay: anime.stagger(200),
+      duration: 1000,
+      easing: 'easeOutQuad'
+    });
+anime({
+      targets: '#imageGrid .bg-img',
+      opacity: [0, 1],
+      scale: [0.8, 1],
+      delay: anime.stagger(150, { start: 500 }),
+      duration: 800,
+      easing: 'easeOutExpo'
+    });
   window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
     anime({
