@@ -46,3 +46,11 @@ anime({
   });
 
   scrollElements.forEach(el => observer.observe(el));
+ anime({
+      targets: '.card',
+      translateY: [100, 0],
+      opacity: [0, 1],
+      delay: anime.stagger(200),
+      duration: 1000,
+      easing: 'easeOutExpo'
+    });
